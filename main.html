@@ -13,23 +13,37 @@
     <h1>My Book Library</h1>
 
     <main class="page">
-        <aside class="container">
+        <form class="container">
             <div class="inputs">
                 <h4>Title</h4>
-                <input class="title" type="text" />
+                <input id="title" type="text" />
             </div>
             <div>
                 <h4>Author</h4>
-                <input class="author" type="text" />
+                <input id="author" type="text" />
             </div>
             <div>
                 <h4>Pages</h4>
-                <input class="pages" type="text" />
+                <input id="pages" type="text" />
             </div>
-            <button class="btn">Add Book</button>
-        </aside>
+            <div>
+                <button id="btn">Add Book</button>
+            </div>
+        </form>
 
-        <table class="table"></table>
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>pages</th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody id="book-list">
+
+            </tbody>
+        </table>
     </main>
     <script src="./main.js"></script>
 </body>
