@@ -1,31 +1,34 @@
 class Book {
-    constructor(title, author, pages) {
-        this.title = title;
-        this.author = author;
-        this.pages = pages;
-    }
-};
+  constructor(title, author, pages) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+  }
+}
 
 const title = document.getElementById("title").value;
 const author = document.getElementById("author").value;
 const pages = document.getElementById("pages").value;
 const button = document.getElementById("btn").value;
 
+
 let myLibrary = [];
 
-function addBookToLibrary() {
 
-    let book1 = new Book(title, author, pages);
+let book1 = new Book(title, author, pages);
 
-    myLibrary.push(book1)
+myLibrary.push(book1)
 
-    let book2 = new Book(title, author, pages);
+let book2 = new Book(title, author, pages);
 
-    myLibrary.push(book2)
+myLibrary.push(book2)
 
-}
+function render() {
+    for (var i = 0; i < myLibrary.length; i++) {
+        document.getElementsByTagName("input").innerHTML += "<table>" + myLibrary[i].book + "</table>";
+    };
 
-
+};
 
 button.addEventListener("click", function addBookToLibrary() {
     if (title.value == "" &&
@@ -48,14 +51,3 @@ button.addEventListener("click", function addBookToLibrary() {
         bookListRow.appendChild(newPages);
     }
 });
-
-
-
-
-
-function render() {
-    for (var i = 0; i < myLibrary.length; i++) {
-        document.getElementsByTagName("input").innerHTML += "<table>" + myLibrary[i].book + "</table>";
-    };
-
-};
